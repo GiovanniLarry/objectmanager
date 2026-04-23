@@ -11,16 +11,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  async rewrites() {
-    return [
-      {
-        source: '/_/backend/:path*',
-        destination: process.env.NODE_ENV === 'development' 
-          ? 'http://localhost:3000/:path*' 
-          : 'http://localhost:3000/:path*', // Update this with your production backend URL if different
-      },
-    ];
-  },
 };
 
 export default nextConfig;

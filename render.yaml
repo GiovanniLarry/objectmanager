@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: object-manager-backend
+    env: node
+    plan: free
+    buildCommand: cd backend && npm install && npm run build
+    startCommand: cd backend && npm run start:prod
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        fromEnvVar: MONGODB_URI
+      - key: CLOUDINARY_CLOUD_NAME
+        fromEnvVar: CLOUDINARY_CLOUD_NAME
+      - key: CLOUDINARY_API_KEY
+        fromEnvVar: CLOUDINARY_API_KEY
+      - key: CLOUDINARY_API_SECRET
+        fromEnvVar: CLOUDINARY_API_SECRET
+      - key: FRONTEND_URL
+        value: https://your-app.vercel.app # Update this after Vercel deployment
