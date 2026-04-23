@@ -11,12 +11,12 @@ services:
       - key: PORT
         value: 10000
       - key: MONGODB_URI
-        value: mongodb+srv://profitwave:<db_password>@cluster0.6ditwhn.mongodb.net/?appName=Cluster0
+        sync: false # This will prompt you to enter the URI in the Render UI
       - key: CLOUDINARY_CLOUD_NAME
-        value: dzosjm76s
+        sync: false 
       - key: CLOUDINARY_API_KEY
-        value: "747596891582114"
+        sync: false
       - key: CLOUDINARY_API_SECRET
-        value: O9uWxgA9fXyACwUoxqWmfyit_-w
+        sync: false
       - key: FRONTEND_URL
         value: https://your-app.vercel.app # Update this after Vercel deployment
